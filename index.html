@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa Trainee The Best Açaí 2026</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #0a0a0a;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #ffffff;
+            overflow: hidden;
+        }
+        
+        .header {
+            background: #000000;
+            text-align: center;
+            position: relative;
+            padding: 0;
+        }
+        
+        .header img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .intro {
+            background: #ffffff;
+            padding: 35px 50px 30px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .intro p {
+            color: #1a1a1a;
+            font-size: 17px;
+            font-weight: 300;
+            line-height: 1.8;
+            text-align: left !important;
+        }
+        
+        .content {
+            padding: 35px 50px 0;
+            background: #ffffff;
+        }
+        
+        .section {
+            margin-bottom: 35px;
+        }
+        
+        .section-title {
+            color: #000000;
+            font-size: 20px;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+        
+        .divider {
+            width: 100%;
+            height: 2px;
+            background: #ffad00;
+            margin-bottom: 20px;
+        }
+        
+        .list-minimal {
+            list-style: none;
+        }
+        
+        .list-minimal li {
+            color: #2a2a2a;
+            padding: 12px 0;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 1.7;
+            border-bottom: 1px solid #f5f5f5;
+            position: relative;
+            padding-left: 30px;
+            text-align: left !important;
+        }
+        
+        .list-minimal li:last-child {
+            border-bottom: none;
+        }
+        
+        .list-minimal li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 6px;
+            height: 6px;
+            background: #ffad00;
+            border-radius: 50%;
+        }
+        
+        .list-minimal li strong {
+            color: #000000;
+            font-weight: 500;
+        }
+        
+        .highlight-box {
+            background: #fafafa;
+            padding: 25px;
+            margin: 30px 0;
+            text-align: center;
+            border-top: 3px solid #ffad00;
+            border-bottom: 3px solid #ffad00;
+        }
+        
+        .highlight-box .label {
+            color: #666666;
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            font-weight: 400;
+        }
+        
+        .highlight-box .date {
+            color: #000000;
+            font-size: 24px;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+        }
+        
+        .quote-section {
+            padding: 30px 0;
+            background: #ffffff;
+            margin: 30px 0;
+        }
+        
+        .quote-section p {
+            color: #1a1a1a;
+            font-size: 17px;
+            font-weight: 300;
+            line-height: 1.8;
+            text-align: left !important;
+        }
+        
+        .cta-section {
+            padding: 45px 50px;
+            background: #0a0a0a;
+            text-align: center;
+        }
+        
+        .cta-text {
+            color: #ffffff;
+            font-size: 17px;
+            font-weight: 300;
+            margin-bottom: 25px;
+            line-height: 1.5;
+            letter-spacing: 0.5px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #ffad00;
+            color: #000000;
+            padding: 18px 60px;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.4s ease;
+            border: 2px solid #ffad00;
+        }
+        
+        .cta-button:hover {
+            background: transparent;
+            color: #ffad00;
+        }
+        
+        .footer {
+            background: #f5f5f5;
+            padding: 35px 50px;
+            text-align: center;
+        }
+        
+        .footer-logo {
+            margin-bottom: 25px;
+        }
+        
+        .footer-logo img {
+            max-width: 150px;
+            height: auto;
+        }
+        
+        .footer-divider {
+            width: 60px;
+            height: 2px;
+            background: #ffad00;
+            margin: 0 auto 20px;
+        }
+        
+        .footer .signature {
+            color: #666666;
+            font-size: 15px;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+        }
+        
+        /* Responsividade */
+        @media screen and (max-width: 768px) {
+            body {
+                padding: 0;
+            }
+            
+            .container {
+                max-width: 100%;
+            }
+            
+            .intro {
+                padding: 30px 25px;
+            }
+            
+            .intro p {
+                font-size: 16px;
+            }
+            
+            .content {
+                padding: 30px 25px 0;
+            }
+            
+            .section {
+                margin-bottom: 30px;
+            }
+            
+            .section-title {
+                font-size: 18px;
+            }
+            
+            .list-minimal li {
+                font-size: 15px;
+                padding: 10px 0;
+                padding-left: 25px;
+            }
+            
+            .highlight-box {
+                padding: 20px;
+                margin: 25px 0;
+            }
+            
+            .highlight-box .date {
+                font-size: 20px;
+            }
+            
+            .quote-section {
+                padding: 25px 0;
+                margin: 25px 0;
+            }
+            
+            .quote-section p {
+                font-size: 16px;
+            }
+            
+            .cta-section {
+                padding: 40px 25px;
+            }
+            
+            .cta-text {
+                font-size: 16px;
+                margin-bottom: 20px;
+            }
+            
+            .cta-button {
+                padding: 16px 40px;
+                font-size: 13px;
+                display: block;
+                width: 100%;
+            }
+            
+            .footer {
+                padding: 30px 25px;
+            }
+            
+            .footer-logo img {
+                max-width: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://email-editor-production.s3.amazonaws.com/images/690553/editor_images/Banner_Trainee_E-mail.png" alt="Trainee 2026">
+        </div>
+        
+        <div class="intro">
+            <p>O <strong>Programa Trainee The Best</strong> está com inscrições abertas e pode ser a oportunidade que você estava esperando!</p>
+        </div>
+        
+        <div class="content">
+            <div class="section">
+                <h2 class="section-title">O QUE OFERECEMOS</h2>
+                <div class="divider"></div>
+                <ul class="list-minimal">
+                    <li>Salário: <strong>R$ 6.000,00</strong></li>
+                    <li>Plano de Saúde + Vale Alimentação</li>
+                    <li>Auxílio educacional + Total Pass</li>
+                    <li>Açaí e sorvete liberados!</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">TRILHAS DISPONÍVEIS</h2>
+                <div class="divider"></div>
+                <ul class="list-minimal">
+                    <li><strong>Business</strong> — Estratégia e gestão</li>
+                    <li><strong>Industry</strong> — Produção e logística</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">QUEM PODE PARTICIPAR</h2>
+                <div class="divider"></div>
+                <ul class="list-minimal">
+                    <li>Maiores de 21 anos</li>
+                    <li>Formados entre Dez/2021 e Dez/2025 (todos os cursos)</li>
+                    <li>Disponibilidade para Londrina-PR</li>
+                </ul>
+            </div>
+            
+            <div class="highlight-box">
+                <div class="label">INSCRIÇÕES ATÉ</div>
+                <div class="date">01/01</div>
+            </div>
+            
+            <div class="quote-section">
+                <p>Venha transformar sua carreira com a gente!</p>
+            </div>
+        </div>
+        
+        <div class="cta-section">
+            <p class="cta-text">Dê o primeiro passo para transformar sua carreira</p>
+            <a href="https://trainee.thebestacai.com.br/" class="cta-button">Inscreva-se agora</a>
+        </div>
+        
+        <div class="footer">
+            <div class="footer-logo">
+                <img src="https://email-editor-production.s3.amazonaws.com/images/690553/editor_images/Fa%C3%A7a%20seu%20melhor.png" alt="Faça seu melhor">
+            </div>
+            <div class="footer-divider"></div>
+            <p class="signature">Abraços, Equipe The Best Açaí</p>
+        </div>
+    </div>
+</body>
+</html>
